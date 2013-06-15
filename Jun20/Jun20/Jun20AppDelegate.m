@@ -9,7 +9,7 @@
 #import "Jun20AppDelegate.h"
 #import "View.h"
 
-@implementation Jun20   AppDelegate
+@implementation Jun20AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
