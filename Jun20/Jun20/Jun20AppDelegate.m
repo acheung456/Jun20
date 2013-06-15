@@ -1,22 +1,30 @@
 //
-//  Jun20AppDelegate.m
-//  Jun20
+//  HelloAppDelegate.m
+//  Hello
 //
-//  Created by Andrew Cheung on 6/15/13.
+//  Created by Andrew Cheung on 6/13/13.
 //  Copyright (c) 2013 edu.nyu.scps. All rights reserved.
 //
 
 #import "Jun20AppDelegate.h"
+#import "View.h"
 
-@implementation Jun20AppDelegate
+@implementation Jun20   AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+	UIScreen *screen = [UIScreen mainScreen];
+	CGRect applicationFrame = screen.applicationFrame;
+	CGRect bounds = screen.bounds;
+    
+	view = [[View alloc] initWithFrame: applicationFrame];
+	self.window = [[UIWindow alloc] initWithFrame: bounds];
+    
+	//self.window.backgroundColor = [UIColor whiteColor];
+	[self.window addSubview: view];
+	[self.window makeKeyAndVisible];
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

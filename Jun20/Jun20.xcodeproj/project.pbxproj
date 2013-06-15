@@ -16,6 +16,8 @@
 		970395AA176D0A0500C3DAD6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 970395A9176D0A0500C3DAD6 /* Default.png */; };
 		970395AC176D0A0500C3DAD6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970395AB176D0A0500C3DAD6 /* Default@2x.png */; };
 		970395AE176D0A0500C3DAD6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 970395AD176D0A0500C3DAD6 /* Default-568h@2x.png */; };
+		97C61E02176D0ABC00FCA1B4 /* Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C61E01176D0ABC00FCA1B4 /* Date.m */; };
+		97C61E05176D0ACC00FCA1B4 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C61E04176D0ACC00FCA1B4 /* View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		970395A9176D0A0500C3DAD6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		970395AB176D0A0500C3DAD6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		970395AD176D0A0500C3DAD6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		97C61E00176D0ABC00FCA1B4 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Date.h; path = ../Date.h; sourceTree = "<group>"; };
+		97C61E01176D0ABC00FCA1B4 /* Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Date.m; path = ../Date.m; sourceTree = "<group>"; };
+		97C61E03176D0ACC00FCA1B4 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = View.h; path = ../View.h; sourceTree = "<group>"; };
+		97C61E04176D0ACC00FCA1B4 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = View.m; path = ../View.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,10 @@
 		9703959D176D0A0500C3DAD6 /* Jun20 */ = {
 			isa = PBXGroup;
 			children = (
+				97C61E03176D0ACC00FCA1B4 /* View.h */,
+				97C61E04176D0ACC00FCA1B4 /* View.m */,
+				97C61E00176D0ABC00FCA1B4 /* Date.h */,
+				97C61E01176D0ABC00FCA1B4 /* Date.m */,
 				970395A6176D0A0500C3DAD6 /* Jun20AppDelegate.h */,
 				970395A7176D0A0500C3DAD6 /* Jun20AppDelegate.m */,
 				9703959E176D0A0500C3DAD6 /* Supporting Files */,
@@ -167,6 +177,8 @@
 			files = (
 				970395A4176D0A0500C3DAD6 /* main.m in Sources */,
 				970395A8176D0A0500C3DAD6 /* Jun20AppDelegate.m in Sources */,
+				97C61E02176D0ABC00FCA1B4 /* Date.m in Sources */,
+				97C61E05176D0ACC00FCA1B4 /* View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +293,7 @@
 				970395B3176D0A0500C3DAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
