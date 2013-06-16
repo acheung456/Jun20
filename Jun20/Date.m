@@ -7,15 +7,18 @@
 //
 
 #import "Date.h"
+#import <limits.h>
 
 @implementation Date
+@synthesize reminder;
 
 - (id) initWithMonth:(int)m day:(int)d year:(int)y {
     self = [super init];
     if (self){
         year = y;
-        month = m;
-        day = d;
+        self.month = m; //Thing to Try #1, setMonth: will capture the exception
+        self.day = d;
+        reminder = @"";
     }
     return self;
 }
@@ -32,6 +35,7 @@
         year = components.year;
         month = components.month;
         day = components.day;
+        reminder = @"";
     }
     
     return self;
@@ -54,7 +58,7 @@
 }
 
 - (NSString *) description{
-    return [NSString stringWithFormat:@"%d/%d/%d",month,day,year];
+    return [NSString stringWithFormat:@"%d/%d/%d %@",month,day,year,reminder];
 }
 
 - (int) year {
@@ -110,9 +114,46 @@
         return;
     }
     month = 1;
+    
+    if (year == INT_MAX){
+        NSLog(@"You are far enough in the future to come back and fix your limit exception (year is too large).");
+        return;
+    } // Things to try #2, catching a year exception.
     ++year;
+    
 }
 
+- (void) prev {
+    if (day > 1){
+        --day;
+        return;
+    }
+    
+    if (month > 1){
+        --month;
+        day = [self monthLength];
+        return;
+    }
+    month = 12;
+    day = [self monthLength];
+    
+    if (year == INT_MIN) {
+        NSLog(@"You've reached the beggining of time. (Year too small)");
+        return;
+    }
+    --year;
+}
+
+- (void) prev:(int)distance {
+    if (distance < 1){
+        NSLog(@"Distance must be positive");
+        return;
+    }
+    
+    for (int i = 1; i <= distance; ++i){
+        [self prev];
+    }
+}
 
 - (void) next:(int)distance {
     if (distance < 1){

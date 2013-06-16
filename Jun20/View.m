@@ -31,8 +31,7 @@
     UIFont *secondfont = [UIFont systemFontOfSize:20.0];
     
     Date *today = [[Date alloc] init];
-    Date *randomDay = [[Date alloc] initWithMonth:-1 day:1 year:2012];
-    NSLog(@"randomDay: %@",randomDay);
+    // Max INT: 2147483647
     
     NSString *string = @"Hello World :)";
     NSString *secondstring = [[NSString alloc] initWithFormat:@"Today is: %d/%d/%d",
@@ -40,14 +39,10 @@
                               [today day],
                               [today year]];
     
-    NSLog(@"secondstring is %d pixels wide",[secondstring length]);
-    
     CGPoint point = CGPointMake(0.0, 0.0);
     CGPoint secondpoint = CGPointMake(
                                       (50),
                                       100);
-    
-    NSLog(@"Origin should be %d",(320/2)-([secondstring length]/2));
     
 	[string drawAtPoint: point withFont: font];
     [secondstring drawAtPoint: secondpoint withFont:secondfont];

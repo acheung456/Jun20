@@ -12,7 +12,10 @@
     int year;
     int month;
     int day;
+    NSString *reminder;
 }
+
+@property (nonatomic, strong) NSString *reminder;
 
 - (id) initWithMonth: (int) m day: (int) d year: (int) y;
 - (int) monthLength;
@@ -33,6 +36,8 @@
 
 - (void) next;
 - (void) next: (int) distance;
+- (void) prev;
+- (void) prev: (int) distance;
 + (int) yearLength;
 
 @end
