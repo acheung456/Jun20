@@ -33,8 +33,8 @@
     Date *today = [[Date alloc] init];
     // Max INT: 2147483647
     
-    NSString *string = @"Hello World :)";
-    NSString *secondstring = [[NSString alloc] initWithFormat:@"Today is: %d/%d/%d",
+    NSString *string = @"-------------------------------";
+    NSString *secondstring = [[NSString alloc] initWithFormat:@"今天: %d月/%d日/%d年",
                               [today month],
                               [today day],
                               [today year]];
